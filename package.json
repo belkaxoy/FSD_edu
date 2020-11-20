@@ -1,0 +1,24 @@
+{
+  "name": "fsd_edu",
+  "version": "1.0.0",
+  "description": "fsd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belkaxoy/FSD_edu.git"
+  },
+  "keywords": [
+    "fsd",
+    "frontend",
+    "junior"
+  ],
+  "author": "Sorokina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belkaxoy/FSD_edu/issues"
+  },
+  "homepage": "https://github.com/belkaxoy/FSD_edu#readme"
+}
