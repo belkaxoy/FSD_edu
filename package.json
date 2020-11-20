@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/belkaxoy/FSD_edu/issues"
   },
-  "homepage": "https://github.com/belkaxoy/FSD_edu#readme"
+  "homepage": "https://github.com/belkaxoy/FSD_edu#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  }
 }
