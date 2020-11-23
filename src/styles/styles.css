@@ -1,0 +1,21 @@
+@import "~normalize.css";
+@import "fonts.css";
+
+body {
+    font-family: 'Montserrat-Regular';
+}
+.container {
+    padding-top: 2rem;
+    max-width: 980px;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+}
+.logo {
+    background-image: url("../assets/img/logo.svg");
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
