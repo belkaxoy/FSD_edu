@@ -6,6 +6,6 @@ import logo from '@/assets/img/logo.svg'
 
 const post = new Post('Webpack blabla', logo)
 
-$('pre').html(post.toString())
+$('pre').addClass('code').html(post.toString())
 
 console.log('JSON: ', json)
