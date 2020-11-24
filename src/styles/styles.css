@@ -20,5 +20,14 @@ h1 {
     margin: 0 auto;
 }
 .code {
-    color: crimson;
+    color: aqua;
+}
+.img-container {
+    display: flex;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+.img-container img {
+    display: block;
 }
