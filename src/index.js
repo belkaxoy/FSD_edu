@@ -4,6 +4,7 @@ import './styles/styles.css'
 import './styles/scss.scss'
 import json from './assets/json'
 import logo from '@/assets/img/logo.svg'
+import './babel'
 
 const post = new Post('Webpack blabla', logo)
 
