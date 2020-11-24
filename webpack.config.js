@@ -1,9 +1,31 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-//const { title } = require('process')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
+
+const isDev = process.env.NODE_ENV === 'development'
+const isProd = !isDev
+
+const optimization = () => {
+    const config = {
+        splitChunks: {
+            chunks: 'all'
+        }
+    }
+
+    // if (isProd) {
+    //     config.minimizer = [
+    //         new OptimizeCssAssetsPlugin(),
+    //         new TerserWebpackPlugin()
+    //     ]
+    //     config.minimize = true
+    // }
+
+    return config
+}
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -21,17 +43,17 @@ module.exports = {
             '@': path.resolve(__dirname, 'src'),
         }
     },
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
-        }
-    },
+    optimization: optimization(),
     devServer: {
-        port: 4200
+        port: 4200,
+        hot: isDev 
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html'
+            template: './index.html',
+            minify: {
+                collapseWhitespace: isProd
+            }
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
@@ -51,10 +73,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        
-                    },
+                    loader: MiniCssExtractPlugin.loader
                   }, 
                   'css-loader']
             },
