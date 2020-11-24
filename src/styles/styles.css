@@ -1,9 +1,22 @@
 @import "~normalize.css";
 @import "fonts.css";
+@import "../components/button/button.css";
+@import "../components/plan/plan.css";
 
 body {
     font-family: 'Montserrat-Regular';
+    font-size: 18px;
+    line-height: 1.45;
+    color: #999;
+    -webkit-font-smoothing: antialiased;
 }
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .container {
     padding-top: 2rem;
     max-width: 980px;

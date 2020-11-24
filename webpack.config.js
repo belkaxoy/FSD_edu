@@ -67,7 +67,9 @@ module.exports = {
     devtool: isDev ? 'source-map' : '',
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html',
+            filename: 'index.html',
+            template: 'index.pug',
+            //inject: false,
             minify: {
                 collapseWhitespace: isProd
             }
@@ -87,6 +89,10 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                use: ['pug-loader']
+            },
             {
                 test: /\.css$/,
                 use: cssLoaders()
