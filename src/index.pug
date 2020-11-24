@@ -1,16 +1,18 @@
 include ./components/plan/plan
+include ./components/color_item/color_item
 
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     title FSD_edu
-    link(rel="stylesheet" type="text/css" href="main.css")
 
   body
     .container
-      .wrapper
-        +plan({title: "free", price: 0})
-        +plan({title: "personal", price: 25})
-        +plan({title: "business", price: 50, isBusiness: true})
-        +plan({title: "ultimate", price: 99})
+      +color_item({color_name: 'Dark Shade 100%', color_hex: '#1F2041'})
+
+      //- .wrapper
+      //-   +plan({title: "free", price: 0})
+      //-   +plan({title: "personal", price: 25})
+      //-   +plan({title: "business", price: 50, isBusiness: true})
+      //-   +plan({title: "ultimate", price: 99})

@@ -1,0 +1,6 @@
+mixin color_item(options)
+   
+  div(class = 'color-item')
+    div(class = 'color')
+    div(class = 'color-name')= options.color_name || "color name"
+    span(class = 'color-hex')= options.color_hex || "color hex"

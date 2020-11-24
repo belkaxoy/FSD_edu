@@ -2,6 +2,7 @@
 @import "fonts.css";
 @import "../components/button/button.css";
 @import "../components/plan/plan.css";
+@import "../components/color_item/color_item.css";
 
 body {
     font-family: 'Montserrat-Regular';
@@ -9,12 +10,6 @@ body {
     line-height: 1.45;
     color: #999;
     -webkit-font-smoothing: antialiased;
-}
-
-.wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 .container {
