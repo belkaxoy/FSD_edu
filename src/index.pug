@@ -1,5 +1,6 @@
 include ./components/plan/plan
-include ./components/color_item/color_item
+include ./components/color-type/color-type
+include ./components/text-type/text-type
 
 doctype html
 html(lang="en")
@@ -9,10 +10,23 @@ html(lang="en")
 
   body
     .container
-      +color_item({color_name: 'Dark Shade 100%', color_hex: '#1F2041'})
+      .row
+        .color-types
+          +color-type({color_name: 'Dark Shade 100%', color_hex: '#1F2041'})
+          +color-type({color_name: 'Dark Shade 75%', color_hex: '#1F2041'})
+          +color-type({color_name: 'Dark Shade 50%', color_hex: '#1F2041'})
+          +color-type({color_name: 'Dark Shade 25%', color_hex: '#1F2041'})
+          +color-type({color_name: 'Dark Shade 5%', color_hex: '#1F2041'})
+          +color-type({color_name: 'Purple', color_hex: '#BC9CFF'})
+          +color-type({color_name: 'Green', color_hex: '#6FCF97'})
+          
+        .text-types
+          +text-type({element_name: 'H1', element_explanation: 'This one is the sub-section or widget title'})
+          +text-type({element_name: 'H2', element_explanation: 'Next one is the item title inside widgets'})
+          +text-type({element_name: 'H3', element_explanation: 'This is a label or CTA text'})
+          +text-type({element_name: 'Body', element_explanation: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})
 
-      //- .wrapper
-      //-   +plan({title: "free", price: 0})
-      //-   +plan({title: "personal", price: 25})
-      //-   +plan({title: "business", price: 50, isBusiness: true})
-      //-   +plan({title: "ultimate", price: 99})
+        //- +plan({title: "free", price: 0})
+        //- +plan({title: "personal", price: 25})
+        //- +plan({title: "business", price: 50, isBusiness: true})
+        //- +plan({title: "ultimate", price: 99})

@@ -2,40 +2,27 @@
 @import "fonts.css";
 @import "../components/button/button.css";
 @import "../components/plan/plan.css";
-@import "../components/color_item/color_item.css";
+@import "../components/color-type/color-type.css";
+@import "../components/text-type/text-type.css";
 
 body {
-    font-family: 'Montserrat-Regular';
-    font-size: 18px;
-    line-height: 1.45;
-    color: #999;
-    -webkit-font-smoothing: antialiased;
+  font-family: 'Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1F2041;
+  max-width: 1920px;
+  min-width: 320px;
 }
 
 .container {
-    padding-top: 2rem;
-    max-width: 980px;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 150px;
+  padding-top: 37px;
 }
-h1 {
-    text-align: center;
-}
-.logo {
-    background-image: url("../assets/img/logo.svg");
-    background-size: cover;
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
-}
-.code {
-    color: aqua;
-}
-.img-container {
-    display: flex;
-    height: 150px;
-    width: 150px;
-    margin: 0 auto;
-}
-.img-container img {
-    display: block;
+
+.row {
+  display: flex;
+  justify-content: space-between;
 }

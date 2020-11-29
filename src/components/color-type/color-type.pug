@@ -1,0 +1,7 @@
+mixin color-type(options)
+   
+  div(class = 'color-type__item')
+    div(class = 'color-type__item__color')
+    div(class = 'color-type__item__color-name')= options.color_name || "color name"
+      br
+      span= options.color_hex || "color hex"
