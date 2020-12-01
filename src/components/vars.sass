@@ -1,10 +1,20 @@
 // color-types
+$dark-shade: #1F2041
+$purple: #BC9CFF
+$green: #6FCF97
 
-$dark-shade-100: rgb(31, 32, 65)
-$dark-shade-75: rgba(31, 32, 65, 0.75)
-$dark-shade-50: rgba(31, 32, 65, 0.5)
-$dark-shade-25: rgba(31, 32, 65, 0.25)
-$dark-shade-5: rgba(31, 32, 65, 0.05)
+$dark-shade-100: $dark-shade
+$dark-shade-75: transparentize($dark-shade, .25)
+$dark-shade-50: transparentize($dark-shade, .5)
+$dark-shade-25: transparentize($dark-shade, .75)
+$dark-shade-5: transparentize($dark-shade, .95)
+
+%color-type__item-color
+  width: 70px
+  min-width: 50px
+  height: 70px
+  min-height: 50px
+  border-radius: 6px
 
 // text-types
 

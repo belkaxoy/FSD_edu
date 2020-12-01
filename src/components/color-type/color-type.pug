@@ -1,7 +1,7 @@
 mixin color-type(options)
    
   div(class = 'color-type__item')
-    div(class = 'color-type__item__color')
-    div(class = 'color-type__item__color-name')= options.color_name || "color name"
+    div(class = 'color-type__item_' + options.class_name)
+    div(class = 'color-type__item__color-name')= options.color_name
       br
-      span= options.color_hex || "color hex"
+      span= options.color_hex

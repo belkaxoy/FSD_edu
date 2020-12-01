@@ -8,16 +8,18 @@ html(lang="en")
     title FSD_edu
 
   body
+    .logo
+      img(src="./src/assets/img/logo.svg", alt="logo")
     .container
       .row
         .color-types
-          +color-type({color_name: 'Dark Shade 100%', color_hex: '#1F2041'})
-          +color-type({color_name: 'Dark Shade 75%', color_hex: '#1F2041'})
-          +color-type({color_name: 'Dark Shade 50%', color_hex: '#1F2041'})
-          +color-type({color_name: 'Dark Shade 25%', color_hex: '#1F2041'})
-          +color-type({color_name: 'Dark Shade 5%', color_hex: '#1F2041'})
-          +color-type({color_name: 'Purple', color_hex: '#BC9CFF'})
-          +color-type({color_name: 'Green', color_hex: '#6FCF97'})
+          +color-type({color_name: 'Dark Shade 100%', color_hex: '#1F2041', class_name: 'dark-shade-100'})
+          +color-type({color_name: 'Dark Shade 75%', color_hex: '#1F2041', class_name: 'dark-shade-75'})
+          +color-type({color_name: 'Dark Shade 50%', color_hex: '#1F2041', class_name: 'dark-shade-50'})
+          +color-type({color_name: 'Dark Shade 25%', color_hex: '#1F2041', class_name: 'dark-shade-25'})
+          +color-type({color_name: 'Dark Shade 5%', color_hex: '#1F2041', class_name: 'dark-shade-5'})
+          +color-type({color_name: 'Purple', color_hex: '#BC9CFF', class_name: 'purple'})
+          +color-type({color_name: 'Green', color_hex: '#6FCF97', class_name: 'green'})
           
         .text-types
           +text-type({element_name: 'H1', element_explanation: 'This one is the sub-section or widget title'})

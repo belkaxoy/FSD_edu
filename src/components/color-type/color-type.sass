@@ -1,8 +1,11 @@
 @import '../vars'
 
+.color-types
+  flex: 1 300px
+
 .color-type__item
   display: flex
-  justify-content: space-between
+  justify-content: flex-start
   align-items: center
   font-size: 19px
   line-height: 28px
@@ -11,15 +14,41 @@
   &:last-child
     margin-bottom: 0
 
-.color-type__item__color
-  width: 70px
-  height: 70px
-  background: #1F2041
-  border-radius: 6px
+  &_dark-shade-100
+    @extend %color-type__item-color
+    background-color: $dark-shade-100
+  
+  &_dark-shade-75
+    @extend %color-type__item-color
+    background-color: $dark-shade-75
+  
+  &_dark-shade-50
+    @extend %color-type__item-color
+    background-color: $dark-shade-50
 
-.color-type__item__color-name
-  margin-left: 40px
-  font-weight: bold
+  
+  &_dark-shade-25
+    @extend %color-type__item-color
+    background-color: $dark-shade-25
 
-span
-  font-weight: normal
+  
+  &_dark-shade-5
+    @extend %color-type__item-color
+    background-color: $dark-shade-5
+
+  
+  &_purple
+    @extend %color-type__item-color
+    background-color: $purple
+
+  
+  &_green
+    @extend %color-type__item-color
+    background-color: $green
+
+  &__color-name
+    margin-left: 40px
+    font-weight: bold
+
+    span
+      font-weight: normal
