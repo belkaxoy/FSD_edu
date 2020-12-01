@@ -1,7 +1,16 @@
 mixin text-type(options)
    
-  div(class = 'text-type__item')
-    div(class = 'text-type__item__element-name')
-      = options.element_name
-    div(class = 'text-type__item__element-explanation')
-      = options.element_explanation
+  .text-type__item
+    case options.tag
+      when 'h1'
+        h1(class='text-type__item__name')= options.name
+        h1= options.text
+      when 'h2'
+        h2(class='text-type__item__name')= options.name
+        h2= options.text
+      when 'h3'
+        h3(class='text-type__item__name')= options.name
+        h3= options.text
+      when 'p'
+        p(class='text-type__item__name')= options.name
+        p= options.text
