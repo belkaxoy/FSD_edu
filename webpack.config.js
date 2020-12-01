@@ -47,7 +47,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
         main: ['@babel/polyfill', './index.js'],
-        analytics: './analytics.ts'
+        // analytics: './analytics.ts'
     },
     output: {
         filename: filename('js'),
