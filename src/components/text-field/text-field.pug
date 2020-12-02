@@ -1,0 +1,4 @@
+mixin text-field(options)
+
+  label(for=options.id)= options.label
+  input(id=options.id, type=options.type||'text' placeholder=options.placeholder, value= options.text||'')

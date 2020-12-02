@@ -1,7 +1,9 @@
 @import "~normalize.css"
 @import "fonts.css"
+@import "../components/vars.sass"
 @import "../components/color-type/color-type.sass"
 @import "../components/text-type/text-type.sass"
+@import "../components/text-field/text-field.sass"
 
 body
   font-family: 'Montserrat'
@@ -18,25 +20,22 @@ h1, h2, h3, p
     bottom: 0
 
 h1
-  font-size: 24px
-  line-height: 30px
-  font-weight: bold
+  @extend %h1
 
 h2
-  font-size: 19px
-  line-height: 23px
-  font-weight: bold
+  @extend %h2
 
 h3
-  font-size: 12px
-  line-height: 15px
-  font-weight: bold
-  text-transform: uppercase
+  @extend %h3
 
 p, a
-  font-size: 14px
-  line-height: 24px
-  color: $dark-shade-75
+  @extend %p
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus
+  outline: none
 
 .container
   max-width: 1440px
@@ -59,3 +58,9 @@ p, a
   & a
     color: $dark-shade-75
     text-decoration-line: none
+
+// Form Elements
+
+.form-elements h3
+  color: $dark-shade-50
+  font-weight: normal

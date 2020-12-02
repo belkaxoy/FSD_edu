@@ -1,8 +1,17 @@
 extends ../layouts/uikit
 
+include ../components/text-field/text-field
+
 block variables
   - let page_title = 'Form Elements'
 
 block content
-  .row
-    p= page_title
+  .row.form-elements
+    section
+      h3= 'default'
+      +text-field({id: 'text_01', label: 'text field', type: 'email', placeholder: 'Email'})
+      +text-field({id: 'text_01', label: 'text field', placeholder: 'Text', text: 'This is pretty awesome'})
+    section
+      p= page_title
+    section
+      p= page_title
