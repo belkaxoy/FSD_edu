@@ -46,8 +46,7 @@ const cssLoaders = extra => {
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        main: ['@babel/polyfill', './index.js'],
-        // analytics: './analytics.ts'
+        main: ['@babel/polyfill', './index.js']
     },
     output: {
         filename: filename('js'),
