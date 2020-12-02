@@ -1,4 +1,9 @@
 mixin text-field(options)
 
-  label(for=options.id)= options.label
+  if(options.extra_label)
+    .label-group
+      label(for=options.id)= options.label
+      label(class='extra-label')= options.extra_label
+  else
+    label(for=options.id)= options.label
   input(id=options.id, type=options.type||'text' placeholder=options.placeholder, value= options.text||'')
