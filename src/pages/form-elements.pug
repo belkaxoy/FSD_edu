@@ -1,6 +1,7 @@
 extends ../layouts/uikit
 
 include ../components/text-field/text-field
+include ../components/dropdown/dropdown
 
 block variables
   - let page_title = 'Form Elements'
@@ -9,8 +10,9 @@ block content
   .row.form-elements
     section
       h3= 'default'
-      +text-field({id: 'text_01', label: 'text field', type: 'email', placeholder: 'Email'})
-      +text-field({id: 'text_01', label: 'text field', placeholder: 'Text', text: 'This is pretty awesome', extra_label: 'Hover / Focus'})
+      +text-field({id: 'date', label: 'text field', type: 'email', placeholder: 'Email'})
+      +text-field({id: 'date_focused', label: 'text field', placeholder: 'Text', text: 'This is pretty awesome', extra_label: 'Hover / Focus'})
+      +dropdown({id: 'dropdown', label: 'dropdown'})
     section
       p= page_title
     section
