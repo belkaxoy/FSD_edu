@@ -1,0 +1,15 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title= 'UI Kit | ' + page_title
+
+  body
+    .logo
+      img(src="./src/assets/img/logo.svg", alt="logo")
+    .container
+      block content
+    .alias_back
+      a(href="./index.html")= '<— Back to index.html'

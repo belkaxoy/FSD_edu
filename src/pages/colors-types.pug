@@ -1,0 +1,24 @@
+extends ../layouts/uikit
+
+include ../components/color-type/color-type
+include ../components/text-type/text-type
+
+block variables
+  - let page_title = 'Colors&Types'
+
+block content
+  .row
+    .color-types
+      +color-type({color_name: 'Dark Shade 100%', color_hex: '#1F2041', class_name: 'dark-shade-100'})
+      +color-type({color_name: 'Dark Shade 75%', color_hex: '#1F2041', class_name: 'dark-shade-75'})
+      +color-type({color_name: 'Dark Shade 50%', color_hex: '#1F2041', class_name: 'dark-shade-50'})
+      +color-type({color_name: 'Dark Shade 25%', color_hex: '#1F2041', class_name: 'dark-shade-25'})
+      +color-type({color_name: 'Dark Shade 5%', color_hex: '#1F2041', class_name: 'dark-shade-5'})
+      +color-type({color_name: 'Purple', color_hex: '#BC9CFF', class_name: 'purple'})
+      +color-type({color_name: 'Green', color_hex: '#6FCF97', class_name: 'green'})
+      
+    .text-types
+      +text-type({tag: 'h1', name: 'H1', text: 'This one is the sub-section or widget title'})
+      +text-type({tag: 'h2', name: 'H2', text: 'Next one is the item title inside widgets'})
+      +text-type({tag: 'h3', name: 'H3', text: 'This is a label or CTA text'})
+      +text-type({tag: 'p', name: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'})

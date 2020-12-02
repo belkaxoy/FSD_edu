@@ -70,10 +70,31 @@ module.exports = {
             filename: 'index.html',
             template: 'index.pug',
             //inject: false,
-            minify: {
-                collapseWhitespace: isProd
-            }
+            // minify: {
+            //     collapseWhitespace: isProd
+            // }
         }),
+        new HTMLWebpackPlugin({
+            filename: 'colors-types.html',
+            template: './pages/colors-types.pug'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'form-elements.html',
+            template: './pages/form-elements.pug'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'cards.html',
+            template: './pages/cards.pug'
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'headers-footers.html',
+            template: './pages/headers-footers.pug'
+        }),
+        // PAGES.map((page) => new HtmlWebpackPlugin({
+        //     template: `${PAGES_DIR}/${page}`,
+        //     filename: `./${page}`,
+        //     inject: true,
+        // })),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
