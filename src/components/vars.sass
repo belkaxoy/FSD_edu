@@ -1,7 +1,7 @@
 // Main
 
 // Colors
-  
+
 $dark-shade: #1F2041
 $purple: #BC9CFF
 $green: #6FCF97
@@ -34,7 +34,7 @@ $dark-shade-5: transparentize($dark-shade, .95)
   color: $dark-shade-75
 
   
-// Color-types
+// Colors & Types
 
 %color-type__item-color
   width: 70px
@@ -42,3 +42,22 @@ $dark-shade-5: transparentize($dark-shade, .95)
   height: 70px
   min-height: 50px
   border-radius: 6px
+
+// Form Elements
+
+%input
+  display: block
+  box-sizing: border-box
+  min-width: 320px
+  height: 44px
+  border: 1px solid $dark-shade-25
+  border-radius: 4px
+  padding: 0 15px
+  margin-bottom: 20px
+  @extend %p
+
+  &::placeholder
+    color: $dark-shade-25
+
+  &:hover, &:focus, &:active
+    border: 1px solid $dark-shade-50

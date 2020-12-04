@@ -1,3 +1,12 @@
+//- options {
+//-     id,             //select id
+//-     label,
+//-     ?extra_label,
+//-     name,           //select name
+//-     value,          //select value
+//-     text            //select text
+//- }
+
 mixin dropdown(options)
 
   if(options.extra_label)
@@ -6,4 +15,7 @@ mixin dropdown(options)
       label(class='extra-label')= options.extra_label
   else
     label(for=options.id)= options.label
-  input(id=options.id, type=options.type||'text' placeholder=options.placeholder, value= options.text||'')
+  select(name=options.name, id=options.id)
+    each val, key in {1: 'one', 2: 'two', 3: 'three'}
+      li= key + ': ' + val
+      option(value=options.value)=options.text
