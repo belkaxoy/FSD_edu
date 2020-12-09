@@ -31,7 +31,12 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
 const cssLoaders = extra => {
     const loaders = [{
-        loader: MiniCssExtractPlugin.loader
+        loader: MiniCssExtractPlugin.loader,
+        options: {
+            publicPath: (resourcePath, context) => {
+              return path.relative(path.dirname(resourcePath), context) + '/';
+            }
+        }
       }, 
       'css-loader'
     ]
@@ -50,7 +55,8 @@ module.exports = {
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: ''
     },
     resolve: {
         alias: {
@@ -68,10 +74,9 @@ module.exports = {
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: 'index.pug',
-            //inject: false,
-            // minify: {
-            //     collapseWhitespace: isProd
-            // }
+            minify: {
+                collapseWhitespace: isProd
+            }
         }),
         new HTMLWebpackPlugin({
             filename: 'colors-types.html',
@@ -98,7 +103,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets/img/photo_01.png'),
+                    from: path.resolve(__dirname, 'src/assets/img/'),
                     to: path.resolve(__dirname, 'dist')
                 }
             ]
