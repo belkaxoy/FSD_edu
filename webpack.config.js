@@ -86,7 +86,12 @@ module.exports = {
             cache: false,
             minify: {
                 collapseWhitespace: isProd
-            }
+            },
+            options: {
+                publicPath: (resourcePath, context) => {
+                    return path.relative(path.dirname(resourcePath), context) + '/';
+                }
+            }            
         }),
         ...PAGES.map((page) => new HTMLWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
@@ -97,8 +102,8 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets/img/'),
-                    to: path.resolve(__dirname, 'dist')
+                    from: path.resolve(__dirname, 'src/assets/img/logo.svg'),
+                    to: path.resolve(__dirname, 'dist/')
                 }
             ]
         }),
