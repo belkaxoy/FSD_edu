@@ -41,11 +41,6 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 const cssLoaders = extra => {
     const loaders = [{
         loader: MiniCssExtractPlugin.loader,
-        options: {
-            publicPath: (resourcePath, context) => {
-              return path.relative(path.dirname(resourcePath), context) + '/';
-            }
-        }
       }, 
       'css-loader'
     ]
@@ -123,7 +118,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|ttf|woff)$/,
-                use: ['file-loader']
+                loader: 'file-loader',
+                // options: {
+                // name: '[path][name].[ext]',
+                // },
             },
             {
                 test: /\.s[ac]ss$/,

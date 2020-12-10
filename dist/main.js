@@ -155,19 +155,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/img/logo.svg":
-/*!*****************************!*\
-  !*** ./assets/img/logo.svg ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "c2a93d6ae04f381031de3bb8cecdf4b0.svg");
-
-/***/ }),
-
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
@@ -180,8 +167,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_styles_sass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/styles.sass */ "./styles/styles.sass");
-/* harmony import */ var _assets_img_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/assets/img/logo.svg */ "./assets/img/logo.svg");
-
 
 
 

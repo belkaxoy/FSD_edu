@@ -1,13 +1,13 @@
 @font-face {
 	font-family: 'Montserrat';
-	src: local('☺'), url(../4a81d5e278ba4f89d1c9662910a348b0.woff) format('woff'), url(../3cd786652b8a2e9d41f210cb1a527ff6.ttf) format('truetype'), url(../c8447519d31e0e397c0c8c6f74371792.svg) format('svg');
+	src: local('☺'), url(4a81d5e278ba4f89d1c9662910a348b0.woff) format('woff'), url(3cd786652b8a2e9d41f210cb1a527ff6.ttf) format('truetype'), url(c8447519d31e0e397c0c8c6f74371792.svg) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'Montserrat';
-	src: local('☺'), url(../d84c60e864f9a07bd88d57709f6577d5.woff) format('woff'), url(../079ca05d3ded9bc107ab8a8da013be22.ttf) format('truetype'), url(../a0b11c16e44ba96d3a938e580fbc077b.svg) format('svg');
+	src: local('☺'), url(d84c60e864f9a07bd88d57709f6577d5.woff) format('woff'), url(079ca05d3ded9bc107ab8a8da013be22.ttf) format('truetype'), url(a0b11c16e44ba96d3a938e580fbc077b.svg) format('svg');
 	font-weight: bold;
 	font-style: normal;
 }
