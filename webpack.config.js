@@ -69,20 +69,21 @@ module.exports = {
     },
     resolve: {
         alias: {
-            '@models': path.resolve(__dirname, 'src/models'),
+            '@assets': path.resolve(__dirname, 'src/assets'),
             '@': path.resolve(__dirname, 'src'),
         }
     },
     optimization: optimization(),
     devServer: {
         port: 4200,
-        hot: isDev 
+        hot: isDev
     },
     devtool: isDev ? 'source-map' : '',
     plugins: [
         new HTMLWebpackPlugin({
             filename: 'index.html',
             template: 'index.pug',
+            cache: false,
             minify: {
                 collapseWhitespace: isProd
             }
