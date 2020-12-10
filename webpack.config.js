@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -8,6 +9,14 @@ const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = !isDev
+
+const PATHS = {
+    src: path.join(__dirname, '/src'),
+    dist: path.join(__dirname, '/dist'),
+    pages: 'pages/'
+}
+const PAGES_DIR = `${PATHS.src}/${PATHS.pages}`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 const optimization = () => {
     const config = {
@@ -78,27 +87,11 @@ module.exports = {
                 collapseWhitespace: isProd
             }
         }),
-        new HTMLWebpackPlugin({
-            filename: 'colors-types.html',
-            template: './pages/colors-types.pug'
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'form-elements.html',
-            template: './pages/form-elements.pug'
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'cards.html',
-            template: './pages/cards.pug'
-        }),
-        new HTMLWebpackPlugin({
-            filename: 'headers-footers.html',
-            template: './pages/headers-footers.pug'
-        }),
-        // PAGES.map((page) => new HtmlWebpackPlugin({
-        //     template: `${PAGES_DIR}/${page}`,
-        //     filename: `./${page}`,
-        //     inject: true,
-        // })),
+        ...PAGES.map((page) => new HTMLWebpackPlugin({
+            template: `${PAGES_DIR}/${page}`,
+            filename: `./${page.replace(/\.pug/,'.html')}`,
+            inject: true,
+        })),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
             patterns: [
