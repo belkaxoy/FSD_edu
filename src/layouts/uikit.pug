@@ -7,9 +7,10 @@ html(lang="en")
     title= 'UI Kit | ' + page_title
 
   body
-    .logo
-      img(src="./logo.svg", alt="logo")
-    .container
-      block content
-    .alias_back
-      a(href="./index.html")= '< back to index.html'
+    .body-container
+      .logo
+        img(src="./logo.svg", alt="logo")
+      .container
+        block content
+      .alias_back
+        a(href="./index.html")= '< back to index.html'

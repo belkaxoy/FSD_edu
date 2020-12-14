@@ -13,7 +13,29 @@ block content
       +text-field({id: 'date', label: 'text field', type: 'email', placeholder: 'Email'})
       +text-field({id: 'date_focused', label: 'text field', placeholder: 'Text', text: 'This is pretty awesome', extra_label: 'Hover / Focus'})
       +dropdown({id: 'dropdown', label: 'dropdown', name: 'example-name'},{text: 'Сколько гостей', value: 'guests_number'})
+      label(for='input-masked')= 'masked text field'
+      input(id='input-masked' class='input-masked' type='text' placeholder='ДД.ММ.ГГГГ')
+
     section
-      p= page_title
+      label= 'Checkbox Buttons'
+      .checkbox-list
+        label(for='can-smoke')= 'Можно курить'
+        input(id='can-smoke' type='checkbox' name='can-smoke')
+        label(for='can-take-pets')= 'Можно с питомцами'
+        input(id='can-take-pets' type='checkbox' name='can-take-pets'  checked)
+        label(for='can-take-guests')= 'Можно пригласить гостей (до 10 человек)'
+        input(id='can-take-guests' type='checkbox' name='can-take-guests' checked)
+
+      label= 'Radio Buttons'
+      .radio-list
+        label(for='male')= 'Мужчина'
+        input(id='male' type='radio' name='male')
+        label(for='female')= 'Женщина'
+        input(id='female' type='radio' name='female')
+      
+      label= 'toggle'
+      .toggle
+        input(id='toggle' type='checkbox' checked)
+        label(for='toggle')= 'Получать спецпредложения'
     section
       p= page_title
