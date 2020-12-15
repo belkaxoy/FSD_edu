@@ -2,6 +2,9 @@ extends ../layouts/uikit
 
 include ../components/text-field/text-field
 include ../components/dropdown/dropdown
+include ../components/checkbox/checkbox
+include ../components/radio/radio
+include ../components/toggle/toggle
 
 block variables
   - let page_title = 'Form Elements'
@@ -18,24 +21,12 @@ block content
 
     section
       label= 'Checkbox Buttons'
-      .checkbox-list
-        label(for='can-smoke')= 'Можно курить'
-        input(id='can-smoke' type='checkbox' name='can-smoke')
-        label(for='can-take-pets')= 'Можно с питомцами'
-        input(id='can-take-pets' type='checkbox' name='can-take-pets'  checked)
-        label(for='can-take-guests')= 'Можно пригласить гостей (до 10 человек)'
-        input(id='can-take-guests' type='checkbox' name='can-take-guests' checked)
+      +checkbox
 
       label= 'Radio Buttons'
-      .radio-list
-        label(for='male')= 'Мужчина'
-        input(id='male' type='radio' name='male')
-        label(for='female')= 'Женщина'
-        input(id='female' type='radio' name='female')
+      +radio
       
       label= 'toggle'
-      .toggle
-        input(id='toggle' type='checkbox' checked)
-        label(for='toggle')= 'Получать спецпредложения'
+      +toggle
     section
       p= page_title
