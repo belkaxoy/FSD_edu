@@ -509,6 +509,48 @@ label {
   color: rgba(31, 32, 65, 0.5);
   font-weight: normal; }
 
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; }
+
+.checkbox-group {
+  margin-bottom: 10px; }
+  .checkbox-group input[type="checkbox"], .checkbox-group select[type="checkbox"], .checkbox-group option[type="checkbox"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; }
+    .checkbox-group input[type="checkbox"] + label, .checkbox-group select[type="checkbox"] + label, .checkbox-group option[type="checkbox"] + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      font-style: normal;
+      font-weight: normal;
+      color: rgba(31, 32, 65, 0.5);
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: none;
+      cursor: pointer; }
+    .checkbox-group input[type="checkbox"] + label::before, .checkbox-group select[type="checkbox"] + label::before, .checkbox-group option[type="checkbox"] + label::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 4px;
+      margin-right: 0.5em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%; }
+    .checkbox-group input[type="checkbox"]:checked + label::before, .checkbox-group select[type="checkbox"]:checked + label::before, .checkbox-group option[type="checkbox"]:checked + label::before {
+      border: 1px solid #BC9CFF;
+      background-color: #ffffff;
+      background-image: url(a31f660a28158d7e78e6efb5619fb39f.svg); }
+    .checkbox-group input[type="checkbox"] + label:hover::before, .checkbox-group select[type="checkbox"] + label:hover::before, .checkbox-group option[type="checkbox"] + label:hover::before {
+      border: 1px solid #BC9CFF; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;

@@ -97,7 +97,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets/img/logo.svg'),
+                    from: path.resolve(__dirname, 'src/assets/img/'),
                     to: path.resolve(__dirname, 'dist/')
                 }
             ]

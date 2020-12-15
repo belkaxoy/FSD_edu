@@ -1,9 +1,12 @@
 mixin checkbox
 
   .checkbox-list
-    label(for='can-smoke')= 'Можно курить'
-    input(id='can-smoke' type='checkbox' name='can-smoke')
-    label(for='can-take-pets')= 'Можно с питомцами'
-    input(id='can-take-pets' type='checkbox' name='can-take-pets'  checked)
-    label(for='can-take-guests')= 'Можно пригласить гостей (до 10 человек)'
-    input(id='can-take-guests' type='checkbox' name='can-take-guests' checked)
+    .checkbox-group
+      input(id='can-smoke' type='checkbox' name='can-smoke')
+      label(for='can-smoke')= 'Можно курить'
+    .checkbox-group
+      input(id='can-take-pets' type='checkbox' name='can-take-pets'  checked)
+      label(for='can-take-pets')= 'Можно с питомцами'
+    .checkbox-group
+      input(id='can-take-guests' type='checkbox' name='can-take-guests' checked)
+      label(for='can-take-guests')= 'Можно пригласить гостей (до 10 человек)'
