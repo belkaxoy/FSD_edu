@@ -1,12 +1,8 @@
-mixin checkbox
+mixin checkbox(args)
 
-  .checkbox-list
-    .checkbox-group
-      input(id='can-smoke' type='checkbox' name='can-smoke')
-      label(for='can-smoke')= 'Можно курить'
-    .checkbox-group
-      input(id='can-take-pets' type='checkbox' name='can-take-pets'  checked)
-      label(for='can-take-pets')= 'Можно с питомцами'
-    .checkbox-group
-      input(id='can-take-guests' type='checkbox' name='can-take-guests' checked)
-      label(for='can-take-guests')= 'Можно пригласить гостей (до 10 человек)'
+  .checkbox-group
+    if(args.checked)
+      input(id=args.id type='checkbox' name=args.id checked)
+    else
+      input(id=args.id type='checkbox' name=args.id)
+    label(for=args.id)= args.label

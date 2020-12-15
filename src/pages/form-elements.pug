@@ -2,12 +2,14 @@ extends ../layouts/uikit
 
 include ../components/text-field/text-field
 include ../components/dropdown/dropdown
-include ../components/checkbox/checkbox
+include ../components/checkbox/checkgroup
 include ../components/radio/radio
 include ../components/toggle/toggle
 
 block variables
   - let page_title = 'Form Elements'
+
+  - let checklist = [{id: 'can-smoke', label: 'Можно курить'}, {id: 'can-take-pets', label: 'Можно с питомцами', checked: true}, {id: 'can-take-guests', label: 'Можно пригласить гостей (до 10 человек)', checked: true}]
 
 block content
   .row.form-elements
@@ -21,12 +23,12 @@ block content
 
     section
       label= 'Checkbox Buttons'
-      +checkbox
+      +checkgroup(checklist)
 
-      label= 'Radio Buttons'
-      +radio
+      //- label= 'Radio Buttons'
+      //- +radio
       
-      label= 'toggle'
-      +toggle
+      //- label= 'toggle'
+      //- +toggle
     section
       p= page_title
